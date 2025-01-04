@@ -100,6 +100,3 @@ for i in tqdm(links):
     data.append(d)
 
 # %%
-data
-
-# %%
