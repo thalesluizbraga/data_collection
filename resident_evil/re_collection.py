@@ -1,13 +1,14 @@
 #%%
 
-# Imports
+# 1 - Imports
 import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 # %%
 
-# Funcoes
+# 2-  Funcoes
 
 # get_content function
 def get_content(url):
@@ -67,6 +68,8 @@ def get_characters_links():
 
 # %%
 
+# 3 - Extraction
+
 # Chamada das funcoes e definicoes de variaveis
 headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -86,12 +89,6 @@ headers = {
     }
 url = 'https://www.residentevildatabase.com/personagens/ada-wong/'
 url_characters = 'https://www.residentevildatabase.com/personagens'
-
-get_characters_info(url)
-get_characters_links()
-
-# %%
-
 links = get_characters_links()
 data = []
 for i in tqdm(links):
@@ -100,3 +97,7 @@ for i in tqdm(links):
     data.append(d)
 
 # %%
+
+# 4 - Load 
+
+df = pd.Data
