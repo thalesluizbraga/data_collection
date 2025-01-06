@@ -100,4 +100,7 @@ for i in tqdm(links):
 
 # 4 - Load 
 
-df = pd.Data
+df = pd.DataFrame(data)
+df.to_parquet('re.data.parquet')
+
+# %%
