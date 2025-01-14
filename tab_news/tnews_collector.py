@@ -48,3 +48,7 @@ while True:
         time.sleep(60*5)
 
 # %%
+
+df = pd.read_json('../tab_news/data/2025-01-10_00-15-27.874463.json')
+df
+# %%
